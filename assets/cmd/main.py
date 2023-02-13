@@ -4,7 +4,6 @@ import random
 import time
 from data import *
 import keyboard
-
 def inp():
     time.sleep(1)
     keyboard.write(name +
