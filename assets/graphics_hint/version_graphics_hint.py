@@ -3,6 +3,7 @@ import random
 import time
 from tkinter import *
 from tkinter import messagebox
+open("data.py", "a")
 from data import *
 def main():  # ГЛАВНЫЙ ЦИКЛ который запускает программу
     root = Tk()  #  СОЗДАНИЕ ГЛАВЫ ROOT

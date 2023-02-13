@@ -4,6 +4,7 @@ import time
 from tkinter import *
 from tkinter import messagebox
 import keyboard
+open("data.py", "a")
 from data import *
 def main():
     root = Tk()

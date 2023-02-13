@@ -2,29 +2,30 @@ import os
 import sys
 import random
 import time
+open("data.py", "a")
 from data import *
 import keyboard
-def inp():
-    time.sleep(1)
-    keyboard.write(name +
-                   "\n")
-    time.sleep(0.2)
-    keyboard.write(years +
-                   "\n")
-    time.sleep(0.2)
-    keyboard.write(base +
-                   "\n")
-    time.sleep(0.2)
-    keyboard.write(join +
-                   "\n")
-    time.sleep(0.2)
-    keyboard.write(doing +
-                   "\n")
-    time.sleep(0.2)
 
-print("Нажмите клавишу клавишу [home] что бы ввести последние данные!")
-keyboard.wait("home")
-inp()
+def inp():
+    time.sleep(1)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+    keyboard.write(name +  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+                   "\n")  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+    time.sleep(0.2)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+    keyboard.write(years +  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+                   "\n")  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+    time.sleep(0.2)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+    keyboard.write(base +  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+                   "\n")  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+    time.sleep(0.2)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+    keyboard.write(join +  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+                   "\n")  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+    time.sleep(0.2)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+    keyboard.write(doing +  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+                   "\n")  #  ВВОДИТ ВСЕ ЗНАЧЕНИЯ ЗА ПОЛЬЗОВАТЕЛЯ
+    time.sleep(0.2)  #  ЗАДАРЖКА В 0.2 СЕКУНДЫ
+
+print("Нажмите клавишу клавишу [home] что бы ввести последние данные!")  #  ВЫВОДИТ ТЕКСТ В КОНСОЛЬ
+keyboard.add_hotkey("home", lambda: inp())  #  СОЗДАЕТ БИНД ПРИ НААТИИ НА КОТОРЫЙ БУДУТ ВВОДИТСЯ ПОСЛЕДНИЕ ДАННЫЕ
 
 ##################################################################################
 """                                                                                         ВОПРОССЫ                                                                                                                                                                                 """
@@ -37,7 +38,6 @@ user_base = input("Сколько килограм вы весите? >>> ")  # 
 user_join = input("Кем вы работаете? >>> ")  # РАБОТА
 
 user_doing = input("Какую должность вы занимаете? >>> ")  # ДОЛЖНОСТЬ
-
 time.sleep(random.triangular(0.3, 1))  # ЗАДЕРЖКА ПЕРЕЗ ОТЧИСТКОЙ КОММАНДНОЙ СТРОКИ
 """                                                                                         ВОПРОССЫ                                                                                    """
 ########################################################
@@ -118,6 +118,7 @@ with open('data.py', 'w', encoding='utf-8') as f:
             'base = "' + user_base + '"\n' +
             'join = "' + user_join + '"\n' +
             'doing = "' + user_doing + '"')
+keyboard.wait()
 
 
 
