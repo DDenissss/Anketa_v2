@@ -5,7 +5,6 @@ from tkinter import *
 from tkinter import messagebox
 import keyboard
 from data import *
-
 def main():
     root = Tk()
 

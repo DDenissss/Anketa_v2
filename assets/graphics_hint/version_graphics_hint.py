@@ -4,7 +4,6 @@ import time
 from tkinter import *
 from tkinter import messagebox
 from data import *
-
 def main():  # ГЛАВНЫЙ ЦИКЛ который запускает программу
     root = Tk()  #  СОЗДАНИЕ ГЛАВЫ ROOT
 
