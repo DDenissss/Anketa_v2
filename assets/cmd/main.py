@@ -2,7 +2,6 @@ import os
 import sys
 import random
 import time
-open("data.py", "a")
 from data import *
 import keyboard
 
@@ -119,21 +118,3 @@ with open('data.py', 'w', encoding='utf-8') as f:
             'join = "' + user_join + '"\n' +
             'doing = "' + user_doing + '"')
 keyboard.wait()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
